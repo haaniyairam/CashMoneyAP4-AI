@@ -1,23 +1,41 @@
 {
-  "name": "scratchpad",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+  "name": "@babel/types",
+  "version": "7.20.2",
+  "description": "Babel Types is a Lodash-esque utility library for AST nodes",
+  "author": "The Babel Team (https://babel.dev/team)",
+  "homepage": "https://babel.dev/docs/en/next/babel-types",
+  "bugs": "https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20types%22+is%3Aopen",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/babel/babel.git",
+    "directory": "packages/babel-types"
+  },
+  "main": "./lib/index.js",
+  "types": "./lib/index-legacy.d.ts",
+  "typesVersions": {
+    ">=3.7": {
+      "lib/index-legacy.d.ts": [
+        "lib/index.d.ts"
+      ]
+    }
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-    "eslint": "8.27.0",
-    "eslint-config-next": "13.0.3",
-    "framer-motion": "^6.5.1",
-    "next": "^13.1.2",
-    "node": "^19.8.1",
-    "openai": "^3.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+    "@babel/helper-string-parser": "^7.19.4",
+    "@babel/helper-validator-identifier": "^7.19.1",
+    "to-fast-properties": "^2.0.0"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7.20.2",
+    "@babel/parser": "^7.20.2",
+    "chalk": "^4.1.0",
+    "glob": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "type": "commonjs"
 }
